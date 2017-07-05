@@ -1,2 +1,2 @@
 # hospitalrun-deploy
-Deployment information for HospitalRun
+Docker deployment for HospitalRun
