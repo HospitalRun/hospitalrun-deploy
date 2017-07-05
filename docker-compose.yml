@@ -6,12 +6,12 @@ services:
     ports:
       - "8055:80"
       - "443:443"
-    image: hospitalrun/hospitalrun-nginx:0.1.0
+    image: hospitalrun/hospitalrun-nginx:1.0.0-beta2
     volumes:
       - ./data/nginx/letsencrypt:/etc/letsencrypt
 
   hospitalrun:
-    image: hospitalrun/hospitalrun-server:0.1.0
+    image: hospitalrun/hospitalrun-server:1.0.0-beta2
     links:
       - couchdb
       - elasticsearch
@@ -52,7 +52,7 @@ services:
       - IPC_LOCK
 
   logstash:
-    image: hospitalrun/hospitalrun-logstash:0.1.0
+    image: hospitalrun/hospitalrun-logstash:1.0.0-beta2
     volumes:
       - ./logstash/pipeline/:/usr/share/logstash/pipeline/
       - ./logstash/config/:/usr/share/logstash/config/
